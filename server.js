@@ -1,11 +1,13 @@
+require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const app = express()
-const apiKey = process.env.API_KEY
 
 
-require("dotenv").config();
+
+const apiKey = process.env.API_KEY;
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
